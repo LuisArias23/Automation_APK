@@ -15,20 +15,14 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class CheckOutStep {
-    @Managed(driver = "Appium")
-    public WebDriver hisMobileDevice;
 
-    @Before
-    public void set_the_stage() {
-        OnStage.setTheStage(new OnlineCast());
-    }
     @And("completa el proceso de Checkout con datos ficticios")
     public void completa_el_proceso_de_checkout_con_datos_ficticios() {
 
         theActorInTheSpotlight().attemptsTo(
                 ProsCheckOut.withCheckOut(
                         "Luis Edgardo Arias Mercadom", "Calle 1","Calle 2","Fundacion",
-                        "Magdalena",472020,"xxx","125452569875458","02/30",-123));
+                        "Magdalena",472020,"xxx","125452569875458","02/30",123));
     }
 
     @Then("el sistema debe mostrar una pantalla de confirmación con el mensaje de éxito.")

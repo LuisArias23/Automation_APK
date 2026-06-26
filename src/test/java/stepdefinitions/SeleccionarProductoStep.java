@@ -14,13 +14,7 @@ import tasks.SeleccionarProducto;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class SeleccionarProductoStep {
-    @Managed(driver = "Appium")
-    public WebDriver hisMobileDevice;
 
-    @Before
-    public void set_the_stage() {
-        OnStage.setTheStage(new OnlineCast());
-    }
 
     @And("selecciona el producto Sauce Labs Backpack para añadirlo al carrito")
     public void selecciona_el_producto_para_añadirlo_al_carrito() {

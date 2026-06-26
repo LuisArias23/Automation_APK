@@ -58,7 +58,6 @@ public class ProsCheckOut implements Task {
                 SendKeys.of(expirationDate).into(CheckOut.tctExpirationDate),
                 SendKeys.of("" + securityCode).into(CheckOut.tctSecurityCode),
                 Click.on(CheckOut.btConfirmar),
-                Click.on(CheckOut.btConfirmar),
                 WaitUntil.the(btPlaceOrder, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(btPlaceOrder)
                 );

@@ -3,7 +3,6 @@ package questions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import ui.CheckOut;
-import ui.LoginView;
 
 public class CheckOutQuestions implements Question {
     @Override

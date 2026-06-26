@@ -11,8 +11,6 @@ import org.openqa.selenium.WebDriver;
 import tasks.IngresarMenu;
 import tasks.Login;
 
-
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -23,9 +21,7 @@ public class LoginStepDefinitions {
     @Before
     public void set_the_stage() {
         OnStage.setTheStage(new OnlineCast());
-
     }
-
 
     @Given("que el usuario abre la aplicación y se encuentra en la pantalla de Login")
     public void que_el_usuario_abre_la_aplicación_y_se_encuentra_en_la_pantalla_de_login() {
