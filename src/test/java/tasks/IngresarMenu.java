@@ -12,7 +12,7 @@ public class IngresarMenu implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(LoginView.menu, isVisible()).forNoMoreThan(5).seconds(),
+                WaitUntil.the(LoginView.menu, isVisible()).forNoMoreThan(3).seconds(),
                 Click.on(LoginView.menu),
                 Click.on(LoginView.opcionLogIn)
         );

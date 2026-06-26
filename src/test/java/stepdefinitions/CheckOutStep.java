@@ -1,14 +1,10 @@
 package stepdefinitions;
 
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.thucydides.core.annotations.Managed;
-import org.openqa.selenium.WebDriver;
 import questions.CheckOutQuestions;
 import tasks.ProsCheckOut;
+import utils.DataHelper;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -21,8 +17,11 @@ public class CheckOutStep {
 
         theActorInTheSpotlight().attemptsTo(
                 ProsCheckOut.withCheckOut(
-                        "Luis Edgardo Arias Mercadom", "Calle 1","Calle 2","Fundacion",
-                        "Magdalena",472020,"xxx","125452569875458","02/30",123));
+                        DataHelper.get("checkout.nombre"), DataHelper.get("checkout.direccion1"),
+                        DataHelper.get("checkout.direccion2"), DataHelper.get("checkout.ciudad"),
+                        DataHelper.get("checkout.departamento"), DataHelper.getInt("checkout.zip"),
+                        DataHelper.get("checkout.tex"), DataHelper.get("checkout.numerocard"),
+                        DataHelper.get("checkout.expiredata"), DataHelper.getInt("checkout.codigocv")));
     }
 
     @Then("el sistema debe mostrar una pantalla de confirmación con el mensaje de éxito.")

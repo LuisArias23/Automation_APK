@@ -2,7 +2,7 @@ package ui;
 
 import io.appium.java_client.AppiumBy;
 import net.serenitybdd.screenplay.targets.Target;
-import org.openqa.selenium.By;
+
 
 public class LoginView {
 
@@ -16,6 +16,4 @@ public class LoginView {
             .located(AppiumBy.accessibilityId("Password input field"));
     public static Target loginButton= Target.the("Boton de Login")
             .located(AppiumBy.accessibilityId("Login button"));
-    public  static Target Home=Target.the("Pantalla Home")
-            .located(By.xpath("//android.widget.TextView[@text=\"Products\"]"));
 }

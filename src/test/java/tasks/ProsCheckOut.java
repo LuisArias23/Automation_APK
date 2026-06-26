@@ -52,14 +52,15 @@ public class ProsCheckOut implements Task {
                 SendKeys.of(""+codigo).into(CheckOut.txtZipCode),
                 SendKeys.of(country).into(CheckOut.txtCountry),
                 Click.on(CheckOut.btToPyment),
-                WaitUntil.the(txtFullName, isVisible()).forNoMoreThan(5).seconds(),
+                WaitUntil.the(tctCardNumber, isVisible()).forNoMoreThan(10).seconds(),
                 SendKeys.of(fullName).into(txtFullName),
                 SendKeys.of(cardNumber).into(CheckOut.tctCardNumber),
                 SendKeys.of(expirationDate).into(CheckOut.tctExpirationDate),
                 SendKeys.of("" + securityCode).into(CheckOut.tctSecurityCode),
                 Click.on(CheckOut.btConfirmar),
                 WaitUntil.the(btPlaceOrder, isVisible()).forNoMoreThan(10).seconds(),
-                Click.on(btPlaceOrder)
+                Click.on(btPlaceOrder),
+                WaitUntil.the(txtChechOutComplete, isVisible()).forNoMoreThan(10).seconds()
                 );
     }
 

@@ -28,12 +28,9 @@ public class LoginStepDefinitions {
         theActorCalled("Luis").attemptsTo(Tasks.instrumented(IngresarMenu.class));
     }
 
-    @When("el usuario ingresa las credenciales válidas")
-    public void el_usuario_ingresa_las_credenciales_válidas() {
+    @When("el usuario ingresa las credenciales válidas {string} y {string}")
+    public void el_usuario_ingresa_las_credenciales_válidas_y(String correo, String contra) {
         theActorInTheSpotlight().attemptsTo(
-                Login.withCredenciales("bob@example.com", "10203040"));
-        //String textoEsperado="Products";
-       // theActorInTheSpotlight().should(seeThat("Texto Home", LoginQuestions.value(), equalTo(textoEsperado)));
-
+                Login.withCredenciales(correo, contra));
     }
 }
