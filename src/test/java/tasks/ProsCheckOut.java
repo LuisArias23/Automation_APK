@@ -23,9 +23,9 @@ public class ProsCheckOut implements Task {
     private final String expirationDate;
     private final int securityCode;
 
-
     public ProsCheckOut(String fullName, String address1, String address2, String
             city, String estado, int codigo, String country,  String cardNumber1, String expirationDate1, int securityCode1) {
+
         this.fullName = fullName;
         this.address1 = address1;
         this.address2 = address2;
@@ -37,6 +37,7 @@ public class ProsCheckOut implements Task {
         this.expirationDate = expirationDate1;
         this.securityCode = securityCode1;
     }
+
 
     @Override
     public <T extends Actor> void performAs(T actor) {

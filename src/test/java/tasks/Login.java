@@ -19,6 +19,7 @@ public class Login implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        //ingresando textos
         actor.attemptsTo(
                 SendKeys.of(username).into(LoginView.unerName),
                 SendKeys.of(password).into(LoginView.password),
